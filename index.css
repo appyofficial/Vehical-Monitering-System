@@ -50,28 +50,9 @@ body {
     padding: 5px 18px;
 }
 
-#searchVehicals input {
-    padding: 10px;
-    width: 400px;
-    border: none;
-    border-radius: 25px;
-    background-color: #f6f5fe;
-}
-
-::-webkit-input-placeholder {
-    /* WebKit, Blink, Edge */
-    color: lightskyblue;
-}
-
-#searchVehicals input[type="text"] {
-    padding-left: 20px;
-    font-size: 16px;
-    color: black;
-}
-
 /* Ends Top Navbar*/
 
-/*Buttons*/
+/*Buttons : Not being used at the moment*/
 .myButton {
     background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
     background-color: #7892c2;
@@ -136,6 +117,17 @@ body {
     margin-left: 10px;
 }
 
+/*Ends Control Bar*/
+
+/*Main:  Contains monitor and show details*/
+.main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/*Ends Main*/
+
 /*monitor*/
 .monitor {
     width: 100%;
@@ -164,8 +156,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-
 
 .vcard-vin {
     display: block;
@@ -204,14 +194,8 @@ hr {
 
 /*Ends monitor*/
 
-/**/
-.main {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
 
-/**/
+/*Showing customer details*/
 #showDetail {
     display: none;
     background-color: white;

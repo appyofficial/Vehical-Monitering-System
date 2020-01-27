@@ -4,10 +4,6 @@ const vehicalCard = document.querySelectorAll('.vcard');
 const selectCustomer = document.getElementById('selectCustomer');
 const customerName = document.querySelectorAll('.customer-name');
 const selectVehical = document.getElementById('selectVehical');
-const searchVehicalForm = document.querySelector('#searchVehicals');
-
-document.querySelectorAll('.vregnr').forEach(x => console.log(x.textContent));
-
 
 /*Filter via customer*/
 selectCustomer.addEventListener('change', () => {
@@ -69,7 +65,7 @@ function MonitoringVehicals(customer, id) {
     });
 };
 
-//Fetching Customer
+//Fetching Customer from firebase
 db.collection('customers').get().then((snapshot) => {
     snapshot.docs.map(doc => {
         selectCustomer.innerHTML += `<option value=${doc.data().name.replace(/ +/g, "").toLowerCase()}>${doc.data().name}</option>`;
@@ -77,7 +73,7 @@ db.collection('customers').get().then((snapshot) => {
     });
 }).catch(err => console.log(err));
 
-//Realtime Fetching customer
+//Listening changes in firebase
 db.collection('customers').onSnapshot(snapshot => {
     snapshot.docChanges().map(change => {
         const doc = change.doc;
@@ -107,7 +103,7 @@ db.collection('customers').onSnapshot(snapshot => {
 });
 
 
-/*Show Details*/
+/*Showing customer details*/
 function showDetails(customer, id) {
     monitor.addEventListener('click', (e) => {
         if (e.target.classList.contains('customer-name') && e.target.getAttribute('data-id') === id) {

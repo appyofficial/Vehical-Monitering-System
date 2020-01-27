@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f6f5fe;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/*Default*/
+.hideit {
+    display: none;
+}
+
+.active {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+.inactive {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+/*Ends Default*/
+
+/*Top Navbar*/
+.main-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white !important;
+    border: none !important;
+    color: darkslategray;
+    padding: 5px 18px;
+}
+
+#searchVehicals input {
+    padding: 10px;
+    width: 400px;
+    border: none;
+    border-radius: 25px;
+    background-color: #f6f5fe;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: lightskyblue;
+}
+
+#searchVehicals input[type="text"] {
+    padding-left: 20px;
+    font-size: 16px;
+    color: black;
+}
+
+/* Ends Top Navbar*/
+
+/*Buttons*/
+.myButton {
+    background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+    background-color: #7892c2;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Verdana;
+    font-size: 14px;
+    padding: 13px 12px;
+    text-decoration: none;
+}
+
+.myButton:hover {
+    background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+    background-color: #476e9e;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+/*Ends Buttons*/
+
+/*Control Bar*/
+.controlbar {
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 25px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+
+}
+
+#totalVehicals-container {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.filter-containers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-btn {
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.filter-btn select {
+    padding: 10px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/*monitor*/
+.monitor {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.vcard {
+    color: #051e34;
+    max-width: 400px;
+    padding: 15px;
+    background-color: white;
+    width: 100%;
+    margin: 8px;
+
+}
+
+.vcard-id {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.vcard-vin {
+    display: block;
+    font-weight: bold;
+}
+
+.vcard-regid {
+    margin: 15px 0px;
+}
+
+.vcard-regid p {
+    font-weight: bold;
+}
+
+.vcard-regid h3 {
+    font-weight: normal;
+}
+
+hr {
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+}
+
+.customer-name {
+    float: right;
+    color: rgb(22, 88, 175);
+    cursor: pointer;
+}
+
+.seedetails {
+    display: block;
+    font-size: 14px;
+    color: lightskyblue;
+    float: right;
+}
+
+/*Ends monitor*/
+
+/**/
+.main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/**/
+#showDetail {
+    display: none;
+    background-color: white;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 20%;
+    height: 100%;
+}
+
+.close {
+    background-color: lightsalmon;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.customer-details {
+    padding: 10px;
+    bottom: 10px;
+    right: 0px;
+    background-color: #f6f5fe;
+}
+
+.customer-vehical {
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 10px;
+}
